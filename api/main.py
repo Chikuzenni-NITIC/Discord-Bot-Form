@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST': #3POSTの処理
         print(request.form) #4 formのname属性を取得
         print(request.form['image']) #4 formのname属性を取得
-        text=request.form["message"]+"/r"+request.form['image']
+        text=request.form["message"]+"/n"+request.form['image']
         item_data = {
         "username": "匿名さん",
         "avatar_url": "https://thumb.ac-illust.com/89/89e6bfc83866f18e36bd905fe9a07ea2_t.jpeg",
