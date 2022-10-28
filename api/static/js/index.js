@@ -48,7 +48,7 @@ function fileChange(){
 }
 
 $(".question").submit(function (e) {
-  console.log("aaa")
+  document.querySelector(".submit").disabled=true;
 	const imgInput = document.getElementById('input_img')
 	if (imgInput.files.length) {
     var file_changes = fileChange()
