@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>質問箱</title>
+	<link rel="stylesheet" href="static/css/destyle.css">
+	<link rel="stylesheet" href="static/css/index.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="head">
+				<h1 class="head_mes">質問しよう!</h1>
+			</div>
+			<form class="question" action="" method="post">
+				<div class="text_container">
+					<label class="text_label" for="text">質問</label>
+					<textarea class="text" id="text" type="text" name="message"></textarea>
+				</div>
+				<div class="img_container">
+					<label class="img_label">画像</label>
+					<label for="img" class="img_label_style">
+						<span class="material-symbols-outlined">add</span>
+						<input id="img" class="img" type="file" accept="image/*">
+					</label>
+					<div class="img_selected disable">
+						<img class="img_selected_img" src="" alt="">
+						<div class="cancel">
+							<span class="material-symbols-outlined">close</span>
+						</div>
+					</div>
+				</div>
+				<input class="submit" type="submit" value="送信">
+			</form>
+		</div>
+	</div>
+	<script src="/static/js/index.js"></script>
+</body>
+</html>
