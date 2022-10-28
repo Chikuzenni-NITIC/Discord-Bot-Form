@@ -26,7 +26,6 @@ function fileChange(){
 	var file = document.getElementById('input_img')
 	var form = new FormData()
 	form.append("image", file.files[0])
-	
 	var settings = {
 		"url": "https://api.imgbb.com/1/upload?key=213d6847f2629e881a2617ae2fdf1c25",
 		"method": "POST",
@@ -34,20 +33,26 @@ function fileChange(){
 		"processData": false,
 		"mimeType": "multipart/form-data",
 		"contentType": false,
-		"data": form
+		"data": form,
+    "async" : false
 	}
-	
-	
+  console.log("aaa")
+  var result="";
+
 	$.ajax(settings).done(function (response) {
-		console.log(response)
 		var jx = JSON.parse(response)
-		console.log(jx.data.url)
+    console.log(jx.data.url)
+    result = jx.data.url
 	})
+  return result
 }
 
-document.querySelector(".question").addEventListener('submit', function (e) { 
+$(".question").submit(function (e) {
+  console.log("aaa")
 	const imgInput = document.getElementById('input_img')
 	if (imgInput.files.length) {
-		fileChange()
+    var file_changes = fileChange()
+    console.log(file_changes)
+    document.getElementById("img_url").value = file_changes;
 	}
 })
