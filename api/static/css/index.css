@@ -63,7 +63,7 @@ body {
 }
 .text_label {
   color: #b9bbbb;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 .text {
@@ -104,7 +104,7 @@ body {
 }
 .img_label {
   color: #b9bbbb;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 .img {
@@ -124,12 +124,12 @@ body {
 .disable {
   display: none;
 }
-.img_selected {
+.img_selected_container {
   position: relative;
   height: 120px;
   max-width: 100%;
 }
-.img_selected_img {
+.img_selected {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -162,4 +162,16 @@ body {
 }
 .submit:active {
   background-color: #5260fa;
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .question {
+    height: auto;
+    padding-top: 40px;
+  }
 }
