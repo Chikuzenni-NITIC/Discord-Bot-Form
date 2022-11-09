@@ -27,7 +27,7 @@ function fileChange(){
 	var form = new FormData()
 	form.append("image", file.files[0])
 	var settings = {
-		"url": "https://api.imgbb.com/1/upload?key=213d6847f2629e881a2617ae2fdf1c25",
+		"url": "https://api.imgbb.com/1/upload?key=213d6847f2629e881a2617ae2fdf1c25&expiration=15552000",
 		"method": "POST",
 		"timeout": 0,
 		"processData": false,
