@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name=”robots” content=”noindex”>
+	<meta name="robots" content="noindex">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:type" content="website" />
@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="/static/css/destyle.css">
 	<link rel="stylesheet" href="/static/css/index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,17 +23,16 @@
 			<div class="head">
 				<h1 class="head_mes">質問しよう!</h1>
 			</div>
-			<form class="question" action="/" method="post">
+			<form class="question" action="/" enctype="multipart/form-data" method="post">
 				<div class="text_container">
 					<label class="text_label" for="text">質問</label>
 					<textarea class="text" id="text" type="text" name="message" placeholder="質問を入力"></textarea>
-					<input id="img_url" class="img_url" type="hidden" name="image" value="">
 				</div>
 				<div class="img_container">
 					<label class="img_label">画像</label>
 					<label for="input_img" class="img_label_style">
 						<span class="material-symbols-outlined">add</span>
-						<input id="input_img" class="img" type="file" accept="image/*">
+						<input id="input_img" class="img" type="file" name="file" accept="image/*">
 					</label>
 					<div class="img_selected_container disable">
 						<img class="img_selected" src="" alt="選択された画像">
