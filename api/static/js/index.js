@@ -22,37 +22,3 @@ document.querySelector(".cancel").addEventListener('click', function (e) {
 	inputFile.value = null
 })
 
-function fileChange(){
-	var file = document.getElementById('input_img')
-	var form = new FormData()
-	form.append("image", file.files[0])
-	var settings = {
-		"url": "https://api.imgbb.com/1/upload?key=213d6847f2629e881a2617ae2fdf1c25&expiration=15552000",
-		"method": "POST",
-		"timeout": 0,
-		"processData": false,
-		"mimeType": "multipart/form-data",
-		"contentType": false,
-		"data": form,
-    "async" : false
-	}
-  console.log("aaa")
-  var result="";
-
-	$.ajax(settings).done(function (response) {
-		var jx = JSON.parse(response)
-    console.log(jx.data.url)
-    result = jx.data.url
-	})
-  return result
-}
-
-$(".question").submit(function (e) {
-	document.querySelector(".submit").disabled=true;
-	const imgInput = document.getElementById('input_img')
-	if (imgInput.files.length) {
-    var file_changes = fileChange()
-    console.log(file_changes)
-    document.getElementById("img_url").value = file_changes;
-	}
-})
